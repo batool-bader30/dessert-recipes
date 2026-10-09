@@ -341,24 +341,7 @@ async function submitDeleteCategory(e) {
     }
 }
 
-////////////////  الوضع الداكن  ////////////////////
 
-function applyTheme(theme) {
-    document.documentElement.setAttribute("data-bs-theme", theme);
-    document.getElementById("themeIcon").textContent = theme === "dark" ? "☀️" : "🌙";
-    document.getElementById("themeText").textContent = theme === "dark" ? "الوضع الفاتح" : "الوضع الداكن";
-}
-
-function initTheme() {
-    let saved = "light";
-    try { saved = localStorage.getItem("theme") || "light"; } catch (e) { }
-    applyTheme(saved);
-    document.getElementById("themeToggleBtn").addEventListener("click", () => {
-        const next = document.documentElement.getAttribute("data-bs-theme") === "dark" ? "light" : "dark";
-        applyTheme(next);
-        try { localStorage.setItem("theme", next); } catch (e) { }
-    });
-}
 
 ////////////////  الأحداث  ////////////////////
 
