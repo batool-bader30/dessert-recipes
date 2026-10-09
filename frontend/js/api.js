@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/api";
+const API_URL = "https://dessert-recipes.onrender.com/api";
 
 ////////////////////  دالة مشتركة للطلبات  ////////////////////
 async function request(path, options) {
