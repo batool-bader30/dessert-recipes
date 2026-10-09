@@ -1,0 +1,9 @@
+{
+  "name": "dessert-recipes-backend",
+  "version": "1.0.0",
+  "description": "Express API for the Dessert Recipes project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

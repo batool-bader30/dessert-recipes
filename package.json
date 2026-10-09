@@ -1,0 +1,14 @@
+{
+  "name": "dessert-recipes",
+  "version": "1.0.0",
+  "description": "موقع وصفات الحلويات",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.4",
+    "express": "^5.2.1",
+    "pg": "^8.23.0"
+  }
+}

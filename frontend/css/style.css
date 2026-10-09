@@ -1,0 +1,165 @@
+:root {
+  --brand: #c2410c;
+  --brand-soft: #fff1e6;
+  --brand-ink: #7c2d12;
+  --page-bg: #fffaf5;
+}
+
+[data-bs-theme="dark"] {
+  --brand: #fb923c;
+  --brand-soft: #3a2414;
+  --brand-ink: #fdba74;
+  --page-bg: #1a1412;
+}
+
+body {
+  font-family: "Cairo", system-ui, sans-serif;
+  background: var(--page-bg);
+}
+
+.app-navbar {
+  background: var(--brand-soft);
+  border-bottom: 1px solid color-mix(in srgb, var(--brand) 25%, transparent);
+}
+
+.app-navbar .navbar-brand {
+  color: var(--brand-ink);
+}
+
+.hero h2 {
+  color: var(--brand-ink);
+}
+
+.toolbar {
+  border-radius: 1rem;
+}
+
+/* أزرار الفلترة */
+.chip {
+  border: 1px solid color-mix(in srgb, var(--brand) 45%, transparent);
+  color: var(--brand-ink);
+  background: transparent;
+  border-radius: 999px;
+  padding: 0.3rem 1rem;
+  font-weight: 600;
+}
+
+.chip:hover {
+  background: var(--brand-soft);
+  color: var(--brand-ink);
+}
+
+.chip.active {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+}
+
+[data-bs-theme="dark"] .chip.active {
+  color: #1a1412;
+}
+
+/* بطاقات الوصفات */
+.recipe-card {
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.recipe-card:hover,
+.recipe-card:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 0.6rem 1.2rem rgba(124, 45, 18, 0.15) !important;
+  outline: none;
+}
+
+.recipe-card:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+.category-badge {
+  background: var(--brand-soft);
+  color: var(--brand-ink);
+  font-weight: 600;
+}
+
+.view-link {
+  color: var(--brand);
+  font-weight: 700;
+}
+
+.steps li::marker {
+  color: var(--brand);
+  font-weight: 700;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .recipe-card {
+    transition: none;
+  }
+  .recipe-card:hover {
+    transform: none;
+  }
+}
+
+/* رسالة نجاح صغيرة */
+.app-toast {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(1rem);
+  background: var(--brand);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 2000;
+}
+
+.app-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+[data-bs-theme="dark"] .app-toast {
+  color: #1a1412;
+}
+
+/* ألوان الأزرار الرئيسية بلون الموقع */
+.btn-primary {
+  --bs-btn-bg: var(--brand);
+  --bs-btn-border-color: var(--brand);
+  --bs-btn-hover-bg: var(--brand-ink);
+  --bs-btn-hover-border-color: var(--brand-ink);
+  --bs-btn-active-bg: var(--brand-ink);
+  --bs-btn-active-border-color: var(--brand-ink);
+  --bs-btn-disabled-bg: var(--brand);
+  --bs-btn-disabled-border-color: var(--brand);
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--brand);
+  --bs-btn-border-color: var(--brand);
+  --bs-btn-hover-bg: var(--brand);
+  --bs-btn-hover-border-color: var(--brand);
+  --bs-btn-active-bg: var(--brand);
+  --bs-btn-active-border-color: var(--brand);
+}
+
+[data-bs-theme="dark"] .btn-primary,
+[data-bs-theme="dark"] .btn-outline-primary:hover {
+  --bs-btn-color: #1a1412;
+  --bs-btn-hover-color: #1a1412;
+  --bs-btn-hover-bg: #fdba74;
+  --bs-btn-hover-border-color: #fdba74;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 0.2rem color-mix(in srgb, var(--brand) 25%, transparent);
+}
