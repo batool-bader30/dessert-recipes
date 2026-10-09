@@ -407,7 +407,6 @@ function initEvents() {
 ////////////////  التشغيل  ////////////////////
 
 async function init() {
-    initTheme();
     initEvents();
     try {
         allCategories = await getCategories();
